@@ -64,7 +64,7 @@ pub struct Project1 {
     #[max_len(5, 50)]
     pub hobbies: Vec<String>
 }
-//derive(Accounts) macro derives the necessary traits for the account struct, allowing Anchor to validate and manage teh accounts.
+//derive(Accounts) macro derives the necessary traits for the account struct, allowing Anchor to validate and manage the accounts.
 #[derive(Accounts)]
 //Define the account struct for the SetProject1 instruction. 
 //The 'info lifetime parameter is used to specify that the accounts are tied to the lifetime of the instruction's context.
@@ -92,6 +92,6 @@ pub struct SetProject1<'info> {
     //Project1 account that stores data of Project1 type
     pub project1: Account<'info, Project1>,
     
-    //This specifies the system program accont, which is required for initializing new accounts.
+    //This specifies the system program account, which is required for initializing new accounts.
     pub system_program: Program<'info, System>,
 }
